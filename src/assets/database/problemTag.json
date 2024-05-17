@@ -1,0 +1,357 @@
+[
+  {
+    "kr": "산술",
+    "en": "arithmetic",
+    "bojTagId": 121
+  },
+  {
+    "kr": "구현",
+    "en": "implementation",
+    "bojTagId": 102
+  },
+  {
+    "kr": "수학",
+    "en": "math",
+    "bojTagId": 124
+  },
+  {
+    "kr": "문자열",
+    "en": "string",
+    "bojTagId": 158
+  },
+  {
+    "kr": "자료 구조",
+    "en": "data_structures",
+    "bojTagId": 175
+  },
+  {
+    "kr": "로프",
+    "en": "rope",
+    "bojTagId": 159
+  },
+  {
+    "kr": "스플레이 트리",
+    "en": "splay_tree",
+    "bojTagId": 69
+  },
+  {
+    "kr": "트리",
+    "en": "trees",
+    "bojTagId": 120
+  },
+  {
+    "kr": "백트래킹",
+    "en": "backtracking",
+    "bojTagId": 5
+  },
+  {
+    "kr": "브루트포스",
+    "en": "bruteforcing",
+    "bojTagId": 125
+  },
+  {
+    "kr": "조합론",
+    "en": "combinatorics",
+    "bojTagId": 6
+  },
+  {
+    "kr": "재귀",
+    "en": "recursion",
+    "bojTagId": 62
+  },
+  {
+    "kr": "외판원 순회",
+    "en": "tsp",
+    "bojTagId": 138
+  },
+  {
+    "kr": "정수론",
+    "en": "number_theory",
+    "bojTagId": 95
+  },
+  {
+    "kr": "소수 판정",
+    "en": "primality_test",
+    "bojTagId": 9
+  },
+  {
+    "kr": "에라토스테네스의 체",
+    "en": "sieve",
+    "bojTagId": 67
+  },
+  {
+    "kr": "깊이 우선 탐색",
+    "en": "dfs",
+    "bojTagId": 127
+  },
+  {
+    "kr": "그래프",
+    "en": "graphs",
+    "bojTagId": 7
+  },
+  {
+    "kr": "그래프 탐색",
+    "en": "graph_traversal",
+    "bojTagId": 11
+  },
+  {
+    "kr": "비트 마스크",
+    "en": "bitmask",
+    "bojTagId": 14
+  },
+  {
+    "kr": "확률",
+    "en": "probability",
+    "bojTagId": 177
+  },
+  {
+    "kr": "너비 우선 탐색",
+    "en": "bfs",
+    "bojTagId": 126
+  },
+  {
+    "kr": "스택",
+    "en": "stack",
+    "bojTagId": 71
+  },
+  {
+    "kr": "플로이드-와샬",
+    "en": "floyd_warshall",
+    "bojTagId": 31
+  },
+  {
+    "kr": "게임 이론",
+    "en": "game_theory",
+    "bojTagId": 140
+  },
+  {
+    "kr": "그리디",
+    "en": "greedy",
+    "bojTagId": 33
+  },
+  {
+    "kr": "이진 탐색",
+    "en": "binary_search",
+    "bojTagId": 12
+  },
+  {
+    "kr": "스위핑",
+    "en": "sweeping",
+    "bojTagId": 106
+  },
+  {
+    "kr": "정렬",
+    "en": "sorting",
+    "bojTagId": 97
+  },
+  {
+    "kr": "해시 집합",
+    "en": "hash_set",
+    "bojTagId": 136
+  },
+  {
+    "kr": "매개 변수 탐색",
+    "en": "parametric_search",
+    "bojTagId": 170
+  },
+  {
+    "kr": "투 포인터",
+    "en": "two_pointer",
+    "bojTagId": 80
+  },
+  {
+    "kr": "우선순위 큐",
+    "en": "priority_queue",
+    "bojTagId": 59
+  },
+  {
+    "kr": "기하",
+    "en": "geometry",
+    "bojTagId": 100
+  },
+  {
+    "kr": "피타고라스",
+    "en": "pythagoras",
+    "bojTagId": 60
+  },
+  {
+    "kr": "접두사 합",
+    "en": "prefix_sum",
+    "bojTagId": 139
+  },
+  {
+    "kr": "서로소 집합",
+    "en": "disjoint_set",
+    "bojTagId": 81
+  },
+  {
+    "kr": "무차별 대입법",
+    "en": "mitm",
+    "bojTagId": 46
+  },
+  {
+    "kr": "동적 프로그래밍",
+    "en": "dp",
+    "bojTagId": 25
+  },
+  {
+    "kr": "시뮬레이션",
+    "en": "simulation",
+    "bojTagId": 141
+  },
+  {
+    "kr": "정규 표현식",
+    "en": "regex",
+    "bojTagId": 63
+  },
+  {
+    "kr": "적절한 해결책",
+    "en": "ad_hoc",
+    "bojTagId": 109
+  },
+  {
+    "kr": "경우의 수",
+    "en": "case_work",
+    "bojTagId": 137
+  },
+  {
+    "kr": "위상 정렬",
+    "en": "topological_sorting",
+    "bojTagId": 78
+  },
+  {
+    "kr": "큐",
+    "en": "queue",
+    "bojTagId": 72
+  },
+  {
+    "kr": "덱",
+    "en": "deque",
+    "bojTagId": 73
+  },
+  {
+    "kr": "연결 리스트",
+    "en": "linked_list",
+    "bojTagId": 154
+  },
+  {
+    "kr": "구문 분석",
+    "en": "parsing",
+    "bojTagId": 96
+  },
+  {
+    "kr": "트리 집합",
+    "en": "tree_set",
+    "bojTagId": 74
+  },
+  {
+    "kr": "이분 그래프",
+    "en": "bipartite_graph",
+    "bojTagId": 197
+  },
+  {
+    "kr": "오일러 경로",
+    "en": "eulerian_path",
+    "bojTagId": 93
+  },
+  {
+    "kr": "분할 정복",
+    "en": "divide_and_conquer",
+    "bojTagId": 24
+  },
+  {
+    "kr": "구성적",
+    "en": "constructive",
+    "bojTagId": 128
+  },
+  {
+    "kr": "임의 정밀도",
+    "en": "arbitrary_precision",
+    "bojTagId": 117
+  },
+  {
+    "kr": "최장 증가 부분 수열",
+    "en": "lis",
+    "bojTagId": 43
+  },
+  {
+    "kr": "배낭 문제",
+    "en": "knapsack",
+    "bojTagId": 148
+  },
+  {
+    "kr": "다익스트라",
+    "en": "dijkstra",
+    "bojTagId": 22
+  },
+  {
+    "kr": "트리 DP",
+    "en": "dp_tree",
+    "bojTagId": 92
+  },
+  {
+    "kr": "0-1 BFS",
+    "en": "0_1_bfs",
+    "bojTagId": 176
+  },
+  {
+    "kr": "유클리드",
+    "en": "euclidean",
+    "bojTagId": 26
+  },
+  {
+    "kr": "최소 신장 트리",
+    "en": "mst",
+    "bojTagId": 49
+  },
+  {
+    "kr": "물리학",
+    "en": "physics",
+    "bojTagId": 116
+  },
+  {
+    "kr": "좌표 압축",
+    "en": "coordinate_compression",
+    "bojTagId": 161
+  },
+  {
+    "kr": "벨만-포드",
+    "en": "bellman_ford",
+    "bojTagId": 10
+  },
+  {
+    "kr": "슬라이딩 윈도우",
+    "en": "sliding_window",
+    "bojTagId": 68
+  },
+  {
+    "kr": "관절점",
+    "en": "articulation",
+    "bojTagId": 4
+  },
+  {
+    "kr": "오일러 투어 기법",
+    "en": "euler_tour_technique",
+    "bojTagId": 150
+  },
+  {
+    "kr": "최소 공통 조상",
+    "en": "lca",
+    "bojTagId": 41
+  },
+  {
+    "kr": "트라이",
+    "en": "trie",
+    "bojTagId": 79
+  },
+  {
+    "kr": "해싱",
+    "en": "hashing",
+    "bojTagId": 8
+  },
+  {
+    "kr": "세그먼트 트리",
+    "en": "segtree",
+    "bojTagId": 65
+  }
+]
