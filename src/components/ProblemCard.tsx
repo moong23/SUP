@@ -1,35 +1,42 @@
-import { ProbData } from "../interfaces";
+import { ProbItem } from "../interfaces";
+import { findTagColorByTagName } from "../utils/findTagColorByTagName";
+import TagBox from "./TagBox";
 
-const ProblemCard = async ({ probData }: { probData: ProbData }) => {
+const ProblemCard = ({
+  probData,
+  currentTag,
+}: {
+  probData: ProbItem;
+  currentTag: number;
+}) => {
   return (
     <a
       href={`https://www.acmicpc.net/problem/${probData.problemId}`}
       target="_blank"
-      className="px-4 py-5 bg-white border border-red-200 rounded-lg cursor-pointer w-card h-card"
+      className="px-4 py-5 bg-white border border-[#bababa] rounded-lg cursor-pointer w-card h-card shadow-sm hover:shadow-lg transition duration-300 ease-in-out"
     >
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between">
         <div className="flex items-center">
           <img
             loading="lazy"
-            src={`https://static.solved.ac/tier_small/${probData.level}.svg`}
-            alt="difficulty"
-            width={24}
-            height={24}
+            src={require(`../assets/Icons/problemLevel/${probData.level}.svg`)}
+            alt={`difficulty-${probData.level}`}
+            className="w-6 h-6"
           />
 
           <div className="ml-2 text-lg">
-            {probData.problemId}. {probData.titles[0].title}
+            {probData.problemId}. {probData.titleKo}
           </div>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="flex w-full gap-2 mt-4 overflow-x-hidden">
         {probData.tags.map((tag, idx) => (
-          <div
+          <TagBox
             key={idx}
-            className="inline-block px-2 py-1 mr-2 text-sm bg-gray-200 rounded-lg"
-          >
-            {tag.displayNames[0].name}
-          </div>
+            tagId={tag.bojTagId}
+            tagName={tag.displayNames[0].name}
+            currentTag={currentTag}
+          />
         ))}
       </div>
     </a>

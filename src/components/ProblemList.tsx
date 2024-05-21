@@ -1,46 +1,98 @@
 import { useQuery } from "@tanstack/react-query";
 import { getProblemList } from "../api/problem";
-import { useUserList } from "../store";
+import { useFilterList, useUserList } from "../store";
 import { useEffect, useState } from "react";
-import { ProbFromApi } from "../interfaces";
-import ProblemTag from "../assets/database/problemTag.json";
+import { preprocessProblemList } from "../utils/sortApiProblemByTags";
+import { CategorizedProblem } from "../interfaces";
+import ProblemCard from "./ProblemCard";
 
 const ProblemList = () => {
   const { userList } = useUserList();
+  const { levelFilter, algorithmFilter, problemFilter } = useFilterList();
+
+  const [noResult, setNoResult] = useState<boolean>(false);
   const { data, isLoading, error } = useQuery({
-    queryKey: ["problemListbyFilters", { userList: userList }],
+    queryKey: [
+      "problemListbyFilters",
+      {
+        userList: userList,
+        problemLevel: levelFilter,
+        problemTags: algorithmFilter,
+      },
+    ],
     queryFn: getProblemList,
     staleTime: 1000 * 60 * 5, // 5 min for now
+    refetchOnReconnect: false,
+    refetchOnWindowFocus: false,
+    refetchOnMount: false,
   });
 
-  const [problemList, setProblemList] = useState<ProbFromApi>({
-    count: 0,
-    items: [],
-  });
-
-  const preprocessProblemList = (data: ProbFromApi) => {
-    const processedData = ProblemTag.map((tag) => {
-      // tag를 기준으로 data를 필터링
-    });
-  };
+  const [problemList, setProblemList] = useState<CategorizedProblem[]>();
 
   useEffect(() => {
-    if (isLoading || !data) return;
-    if (data.count === 0) return;
+    if (isLoading) return;
+
     if (error) {
       alert("관리자에게 문의하세요");
       return;
     }
-    const processedData = preprocessProblemList(data);
-    // setProblemList(processedData);
-    console.log("preprocess", processedData);
-    console.log("APIData", data);
-  }, [isLoading, data, error]);
 
-  return (
-    <div>
-      <span>ProblemList</span>
+    if (!data || data.count === 0) {
+      setNoResult(true);
+      return;
+    }
+
+    let filteredData = data;
+
+    if (problemFilter) {
+      filteredData = {
+        ...data,
+        items: data.items.slice(0, problemFilter),
+      };
+    }
+
+    const processedData = preprocessProblemList(filteredData);
+    setProblemList(processedData);
+  }, [isLoading, data, error, problemFilter]);
+
+  useEffect(() => {
+    console.log(problemList);
+  }, [problemList]);
+
+  return !noResult && problemList ? (
+    <div className="flex h-[580px] flex-row w-full gap-4 overflow-y-hidden shrink-0 overflow-w-scroll mb-12">
+      {problemList?.map((problemByTag: CategorizedProblem) => {
+        const tagBgColor = problemByTag.bgColor;
+        return (
+          <div
+            key={problemByTag.bojTagId}
+            className="flex flex-col w-full overflow-w-scroll"
+          >
+            <span
+              className="h-6 items-center justify-center w-[fit-content] flex px-3 py-1 mb-4 rounded-sm shrink-0 font-[500]"
+              style={{ backgroundColor: tagBgColor }}
+            >
+              {problemByTag.kr}
+            </span>
+            <span className="flex flex-col w-full h-full gap-2 overflow-y-scroll">
+              {problemByTag.problemList.map((problem) => {
+                return (
+                  <ProblemCard
+                    currentTag={problemByTag.bojTagId}
+                    key={problem.problemId + problemByTag.en}
+                    probData={problem}
+                  />
+                );
+              })}
+            </span>
+          </div>
+        );
+      })}
     </div>
+  ) : noResult ? (
+    <div>문제집에서 추천할 문제가 없어요!!!</div>
+  ) : (
+    <div>loading...</div>
   );
 };
 

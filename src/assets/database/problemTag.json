@@ -2,356 +2,427 @@
   {
     "kr": "산술",
     "en": "arithmetic",
-    "bojTagId": 121
+    "bojTagId": 121,
+    "bgColor": "#FFB3BA"
   },
   {
     "kr": "구현",
     "en": "implementation",
-    "bojTagId": 102
+    "bojTagId": 102,
+    "bgColor": "#FFDFBA"
   },
   {
     "kr": "수학",
     "en": "math",
-    "bojTagId": 124
+    "bojTagId": 124,
+    "bgColor": "#effbcd"
   },
   {
     "kr": "문자열",
     "en": "string",
-    "bojTagId": 158
+    "bojTagId": 158,
+    "bgColor": "#BAFFC9"
   },
   {
     "kr": "자료 구조",
     "en": "data_structures",
-    "bojTagId": 175
+    "bojTagId": 175,
+    "bgColor": "#BAE1FF"
   },
   {
     "kr": "로프",
     "en": "rope",
-    "bojTagId": 159
+    "bojTagId": 159,
+    "bgColor": "#FFB347"
   },
   {
     "kr": "스플레이 트리",
     "en": "splay_tree",
-    "bojTagId": 69
+    "bojTagId": 69,
+    "bgColor": "#FFD700"
   },
   {
     "kr": "트리",
     "en": "trees",
-    "bojTagId": 120
+    "bojTagId": 120,
+    "bgColor": "#AEC6CF"
   },
   {
     "kr": "백트래킹",
     "en": "backtracking",
-    "bojTagId": 5
+    "bojTagId": 5,
+    "bgColor": "#77DD77"
   },
   {
-    "kr": "브루트포스",
+    "kr": "브루트포스 알고리즘",
     "en": "bruteforcing",
-    "bojTagId": 125
+    "bojTagId": 125,
+    "bgColor": "#d1e3f6"
   },
   {
     "kr": "조합론",
     "en": "combinatorics",
-    "bojTagId": 6
+    "bojTagId": 6,
+    "bgColor": "#CFCFC4"
   },
   {
     "kr": "재귀",
     "en": "recursion",
-    "bojTagId": 62
+    "bojTagId": 62,
+    "bgColor": "#d4fffc"
   },
   {
-    "kr": "외판원 순회",
+    "kr": "외판원 순회 문제",
     "en": "tsp",
-    "bojTagId": 138
+    "bojTagId": 138,
+    "bgColor": "#FFB7B2"
   },
   {
     "kr": "정수론",
     "en": "number_theory",
-    "bojTagId": 95
+    "bojTagId": 95,
+    "bgColor": "#dbdcff"
   },
   {
     "kr": "소수 판정",
     "en": "primality_test",
-    "bojTagId": 9
+    "bojTagId": 9,
+    "bgColor": "#CB99C9"
   },
   {
     "kr": "에라토스테네스의 체",
     "en": "sieve",
-    "bojTagId": 67
+    "bojTagId": 67,
+    "bgColor": "#ffd4e5"
   },
   {
     "kr": "깊이 우선 탐색",
     "en": "dfs",
-    "bojTagId": 127
+    "bojTagId": 127,
+    "bgColor": "#d1d1f6"
   },
   {
-    "kr": "그래프",
+    "kr": "그래프 이론",
     "en": "graphs",
-    "bojTagId": 7
+    "bojTagId": 7,
+    "bgColor": "#FFD1DC"
   },
   {
     "kr": "그래프 탐색",
     "en": "graph_traversal",
-    "bojTagId": 11
+    "bojTagId": 11,
+    "bgColor": "#ff6f69"
   },
   {
     "kr": "비트 마스크",
     "en": "bitmask",
-    "bojTagId": 14
+    "bojTagId": 14,
+    "bgColor": "#c8e1cc"
   },
   {
-    "kr": "확률",
+    "kr": "확률론",
     "en": "probability",
-    "bojTagId": 177
+    "bojTagId": 177,
+    "bgColor": "#D4A017"
   },
   {
     "kr": "너비 우선 탐색",
     "en": "bfs",
-    "bojTagId": 126
+    "bojTagId": 126,
+    "bgColor": "#96ceb4"
   },
   {
     "kr": "스택",
     "en": "stack",
-    "bojTagId": 71
+    "bojTagId": 71,
+    "bgColor": "#91eff6"
   },
   {
-    "kr": "플로이드-와샬",
+    "kr": "플로이드-워셜",
     "en": "floyd_warshall",
-    "bojTagId": 31
+    "bojTagId": 31,
+    "bgColor": "#F778A1"
   },
   {
     "kr": "게임 이론",
     "en": "game_theory",
-    "bojTagId": 140
+    "bojTagId": 140,
+    "bgColor": "#adeee9"
   },
   {
-    "kr": "그리디",
+    "kr": "그리디 알고리즘",
     "en": "greedy",
-    "bojTagId": 33
+    "bojTagId": 33,
+    "bgColor": "#eecbff"
   },
   {
     "kr": "이진 탐색",
     "en": "binary_search",
-    "bojTagId": 12
+    "bojTagId": 12,
+    "bgColor": "#b8d8be"
   },
   {
     "kr": "스위핑",
     "en": "sweeping",
-    "bojTagId": 106
+    "bojTagId": 106,
+    "bgColor": "#83f6bf"
   },
   {
     "kr": "정렬",
     "en": "sorting",
-    "bojTagId": 97
+    "bojTagId": 97,
+    "bgColor": "#b491ff"
   },
   {
-    "kr": "해시 집합",
+    "kr": "해시를 사용한 집합과 맵",
     "en": "hash_set",
-    "bojTagId": 136
+    "bojTagId": 136,
+    "bgColor": "#efabad"
   },
   {
     "kr": "매개 변수 탐색",
     "en": "parametric_search",
-    "bojTagId": 170
+    "bojTagId": 170,
+    "bgColor": "#eafff2"
   },
   {
-    "kr": "투 포인터",
+    "kr": "두 포인터",
     "en": "two_pointer",
-    "bojTagId": 80
+    "bojTagId": 80,
+    "bgColor": "#dcffd6"
   },
   {
     "kr": "우선순위 큐",
     "en": "priority_queue",
-    "bojTagId": 59
+    "bojTagId": 59,
+    "bgColor": "#d1f6f6"
   },
   {
-    "kr": "기하",
+    "kr": "기하학",
     "en": "geometry",
-    "bojTagId": 100
+    "bojTagId": 100,
+    "bgColor": "#adb2fb"
   },
   {
     "kr": "피타고라스",
     "en": "pythagoras",
-    "bojTagId": 60
+    "bojTagId": 60,
+    "bgColor": "#2ab7ca"
   },
   {
     "kr": "접두사 합",
     "en": "prefix_sum",
-    "bojTagId": 139
+    "bojTagId": 139,
+    "bgColor": "#c4b2bc"
   },
   {
     "kr": "서로소 집합",
     "en": "disjoint_set",
-    "bojTagId": 81
+    "bojTagId": 81,
+    "bgColor": "#d1f0ea"
   },
   {
     "kr": "무차별 대입법",
     "en": "mitm",
-    "bojTagId": 46
+    "bojTagId": 46,
+    "bgColor": "#F778A1"
   },
   {
-    "kr": "동적 프로그래밍",
+    "kr": "다이나믹 프로그래밍",
     "en": "dp",
-    "bojTagId": 25
+    "bojTagId": 25,
+    "bgColor": "#f9dbfd"
   },
   {
     "kr": "시뮬레이션",
     "en": "simulation",
-    "bojTagId": 141
+    "bojTagId": 141,
+    "bgColor": "#ffe9d6"
   },
   {
     "kr": "정규 표현식",
     "en": "regex",
-    "bojTagId": 63
+    "bojTagId": 63,
+    "bgColor": "#C23B22"
   },
   {
-    "kr": "적절한 해결책",
+    "kr": "애드혹",
     "en": "ad_hoc",
-    "bojTagId": 109
+    "bojTagId": 109,
+    "bgColor": "#C23B22"
   },
   {
     "kr": "경우의 수",
     "en": "case_work",
-    "bojTagId": 137
+    "bojTagId": 137,
+    "bgColor": "#abefef"
   },
   {
     "kr": "위상 정렬",
     "en": "topological_sorting",
-    "bojTagId": 78
+    "bojTagId": 78,
+    "bgColor": "#abcdef"
   },
   {
     "kr": "큐",
     "en": "queue",
-    "bojTagId": 72
+    "bojTagId": 72,
+    "bgColor": "#F49AC2"
   },
   {
     "kr": "덱",
     "en": "deque",
-    "bojTagId": 73
+    "bojTagId": 73,
+    "bgColor": "#ffdca6"
   },
   {
     "kr": "연결 리스트",
     "en": "linked_list",
-    "bojTagId": 154
+    "bojTagId": 154,
+    "bgColor": "#efabab"
   },
   {
     "kr": "구문 분석",
     "en": "parsing",
-    "bojTagId": 96
+    "bojTagId": 96,
+    "bgColor": "#7face8"
   },
   {
-    "kr": "트리 집합",
+    "kr": "트리를 사용한 집합과 맵",
     "en": "tree_set",
-    "bojTagId": 74
+    "bojTagId": 74,
+    "bgColor": "#a9eee9"
   },
   {
     "kr": "이분 그래프",
     "en": "bipartite_graph",
-    "bojTagId": 197
+    "bojTagId": 197,
+    "bgColor": "#F778A1"
   },
   {
     "kr": "오일러 경로",
     "en": "eulerian_path",
-    "bojTagId": 93
+    "bojTagId": 93,
+    "bgColor": "#efcdab"
   },
   {
     "kr": "분할 정복",
     "en": "divide_and_conquer",
-    "bojTagId": 24
+    "bojTagId": 24,
+    "bgColor": "#d4ffea"
   },
   {
     "kr": "구성적",
     "en": "constructive",
-    "bojTagId": 128
+    "bojTagId": 128,
+    "bgColor": "#abefcd"
   },
   {
     "kr": "임의 정밀도",
     "en": "arbitrary_precision",
-    "bojTagId": 117
+    "bojTagId": 117,
+    "bgColor": "#c0f4b8"
   },
   {
     "kr": "최장 증가 부분 수열",
     "en": "lis",
-    "bojTagId": 43
+    "bojTagId": 43,
+    "bgColor": "#35a79c"
   },
   {
     "kr": "배낭 문제",
     "en": "knapsack",
-    "bojTagId": 148
+    "bojTagId": 148,
+    "bgColor": "#CB99C9"
   },
   {
     "kr": "다익스트라",
     "en": "dijkstra",
-    "bojTagId": 22
+    "bojTagId": 22,
+    "bgColor": "#836953"
   },
   {
     "kr": "트리 DP",
     "en": "dp_tree",
-    "bojTagId": 92
+    "bojTagId": 92,
+    "bgColor": "#2e6ec5"
   },
   {
     "kr": "0-1 BFS",
     "en": "0_1_bfs",
-    "bojTagId": 176
+    "bojTagId": 176,
+    "bgColor": "#afeff9"
   },
   {
-    "kr": "유클리드",
+    "kr": "유클리드 호제법",
     "en": "euclidean",
-    "bojTagId": 26
+    "bojTagId": 26,
+    "bgColor": "#F0EAD6"
   },
   {
     "kr": "최소 신장 트리",
     "en": "mst",
-    "bojTagId": 49
+    "bojTagId": 49,
+    "bgColor": "#2dc5d3"
   },
   {
     "kr": "물리학",
     "en": "physics",
-    "bojTagId": 116
+    "bojTagId": 116,
+    "bgColor": "#fddccb"
   },
   {
     "kr": "좌표 압축",
     "en": "coordinate_compression",
-    "bojTagId": 161
+    "bojTagId": 161,
+    "bgColor": "#f1bcff"
   },
   {
     "kr": "벨만-포드",
     "en": "bellman_ford",
-    "bojTagId": 10
+    "bojTagId": 10,
+    "bgColor": "#ffb6de"
   },
   {
     "kr": "슬라이딩 윈도우",
     "en": "sliding_window",
-    "bojTagId": 68
+    "bojTagId": 68,
+    "bgColor": "#facfbe"
   },
   {
     "kr": "관절점",
     "en": "articulation",
-    "bojTagId": 4
+    "bojTagId": 4,
+    "bgColor": "#d5ffd3"
   },
   {
     "kr": "오일러 투어 기법",
     "en": "euler_tour_technique",
-    "bojTagId": 150
+    "bojTagId": 150,
+    "bgColor": "#91bfca"
   },
   {
     "kr": "최소 공통 조상",
     "en": "lca",
-    "bojTagId": 41
+    "bojTagId": 41,
+    "bgColor": "#78dfb9"
   },
   {
     "kr": "트라이",
     "en": "trie",
-    "bojTagId": 79
+    "bojTagId": 79,
+    "bgColor": "#e0edef"
   },
   {
     "kr": "해싱",
     "en": "hashing",
-    "bojTagId": 8
+    "bojTagId": 8,
+    "bgColor": "#82afff"
   },
   {
     "kr": "세그먼트 트리",
     "en": "segtree",
-    "bojTagId": 65
+    "bojTagId": 65,
+    "bgColor": "#54a6bf"
   }
 ]

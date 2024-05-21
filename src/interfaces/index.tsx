@@ -11,23 +11,23 @@ export interface ProbFromApi {
 }
 
 export interface ProbItem {
-  acceptedUserCount: number;
-  averageTries: number;
-  givesNoRating: boolean;
-  isLevelLocked: boolean;
-  isPartial: boolean;
-  isSolvable: boolean;
+  acceptedUserCount?: number;
+  averageTries?: number;
+  givesNoRating?: boolean;
+  isLevelLocked?: boolean;
+  isPartial?: boolean;
+  isSolvable?: boolean;
   level: number;
-  metadata: any;
-  official: boolean;
+  metadata?: any;
+  official?: boolean;
   problemId: number;
-  sprout: boolean;
+  sprout?: boolean;
   tags: Tag[];
   titleKo: string;
-  titles: Title[];
-  votedUserCount: number;
+  titles?: Title[];
+  votedUserCount?: number;
 }
-interface Tag {
+export interface Tag {
   aliases: Alias[];
   bojTagId: number;
   displayNames: DisplayName[];
@@ -49,4 +49,12 @@ interface Title {
   language: string;
   languageDisplayName: string;
   title: string;
+}
+
+export interface CategorizedProblem {
+  kr: string;
+  en: string;
+  bojTagId: number;
+  bgColor: string;
+  problemList: ProbItem[];
 }

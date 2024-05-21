@@ -1,27 +1,31 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import UserCard from "./UserCard";
-import { getProblemList } from "../api/problem";
-import { useProblemList, useUserList } from "../store";
-import { useQuery } from "@tanstack/react-query";
 
-const UserFilter = ({ initialProps }: { initialProps?: string[] }) => {
-  const { setProblemList } = useProblemList();
+import { useUserList } from "../store";
 
-  // const [userList, setUserList] = useState(
-  //   initialProps ?? ["moonki0623", "moong23"]
-  // );
+const UserFilter = () => {
   const { userList, setUserList } = useUserList();
 
   const [localList, setLocalList] = useState<string[]>(
-    initialProps ?? ["moonki0623", "moong23"]
+    JSON.parse(localStorage.getItem("userList") || "null") || ["moonki0623"]
   );
+
   const handleUserClick = (user: string) => {
     let newUserList = userList.filter((u) => u !== user);
     setLocalList(newUserList);
+    setUserList(newUserList);
   };
+
+  useLayoutEffect(() => {
+    const localList = localStorage.getItem("userList");
+    if (localList) {
+      setLocalList(JSON.parse(localList));
+    }
+  }, []);
 
   useEffect(() => {
     console.log(userList);
+    localStorage.setItem("userList", JSON.stringify(localList));
   }, [userList]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -65,8 +69,9 @@ const UserFilter = ({ initialProps }: { initialProps?: string[] }) => {
     const newUserList = [...localList, user];
     setLocalList(newUserList);
   };
+
   return (
-    <div className="flex flex-col gap-4 mt-10 pb-12 mb-4 border-b border-b-[#cfcfcf]">
+    <div className="flex flex-col gap-4 mt-4 pb-12 mb-4 border-b border-b-[#cfcfcf]">
       <span className="flex flex-row w-full gap-4">
         {localList.map((user: string) => {
           return (
@@ -87,7 +92,8 @@ const UserFilter = ({ initialProps }: { initialProps?: string[] }) => {
       </span>
       <span className="text-[#5B5B5B] font-medium text-base">
         * 스터디원의 백준 아이디를 쉼표, 스페이스바, 엔터로 구분하여 넣어주세요{" "}
-        <br /> * input이 blur될 때 문제를 검색합니다.
+        <br /> * tab키를 누르거나, input이 blur될 때 문제를 검색합니다.
+        <br />* 아이디를 클릭하면 삭제됩니다.
       </span>
     </div>
   );

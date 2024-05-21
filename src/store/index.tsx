@@ -1,16 +1,5 @@
 import { create } from "zustand";
 import { ProbFromApi } from "../interfaces";
-
-interface ZProblemList {
-  problemList: ProbFromApi;
-  setProblemList: (problemList: ProbFromApi) => void;
-}
-
-export const useProblemList = create<ZProblemList>((set) => ({
-  problemList: { count: 0, items: [] },
-  setProblemList: (problemList: ProbFromApi) => set({ problemList }),
-}));
-
 interface ZUserList {
   userList: string[];
   setUserList: (userList: string[]) => void;
@@ -19,4 +8,22 @@ interface ZUserList {
 export const useUserList = create<ZUserList>((set) => ({
   userList: ["moonki0623"],
   setUserList: (userList: string[]) => set({ userList }),
+}));
+
+interface ZFilterList {
+  levelFilter: [number, number];
+  algorithmFilter: string[];
+  problemFilter: number;
+  setLevelFilter: (levelFilter: [number, number]) => void;
+  setAlgorithmFilter: (algorithmFilter: string[]) => void;
+  setProblemFilter: (problemCnt: number) => void;
+}
+
+export const useFilterList = create<ZFilterList>((set) => ({
+  levelFilter: [1, 20],
+  algorithmFilter: [],
+  problemFilter: 50,
+  setLevelFilter: (levelFilter: [number, number]) => set({ levelFilter }),
+  setAlgorithmFilter: (algorithmFilter: string[]) => set({ algorithmFilter }),
+  setProblemFilter: (problemFilter: number) => set({ problemFilter }),
 }));
