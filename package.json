@@ -47,6 +47,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://solved.ac/api/v3/",
   "devDependencies": {
     "tailwindcss": "^3.4.3"
   }
