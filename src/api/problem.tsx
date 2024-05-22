@@ -26,7 +26,7 @@ export const getProblemList = async ({ queryKey }: IQueryKey) => {
   );
   const response = await axios
     .get(
-      `https://solved.ac/api/v3/search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
+      `search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
     )
     .then((res) => {
       return res.data;
