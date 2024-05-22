@@ -4,6 +4,9 @@ import { queryStringByUserList } from "../utils/queryStringByUserList";
 import { queryStringByProblemLevel } from "../utils/queryStringByProblemLevel";
 import { queryStringByProblemTags } from "../utils/queryStringByProblemTags";
 
+const PROXY = window.location.hostname === "localhost" ? "" : "/proxy";
+const URL = `${PROXY}/search/problem`;
+
 interface IQueryKey {
   queryKey: [
     string,
@@ -25,9 +28,7 @@ export const getProblemList = async ({ queryKey }: IQueryKey) => {
     `https://solved.ac/api/v3/search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
   );
   const response = await axios
-    .get(
-      `search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
-    )
+    .get(`${URL}?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`)
     .then((res) => {
       return res.data;
     })
