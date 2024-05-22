@@ -1,0 +1,5 @@
+[[redirects]]
+  from = '/proxy/*'
+  to = 'https://solved.ac/api/v3/'
+  status = 200
+  force = true
