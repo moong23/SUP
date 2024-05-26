@@ -64,7 +64,7 @@ const Header = () => {
                 <img
                   src={githubIcon}
                   alt="githubIcon"
-                  className="w-full h-full"
+                  className="w-full h-full cursor-pointer"
                 />
               </a>
             </span>
@@ -78,7 +78,7 @@ const Header = () => {
                 <img
                   src={githubIcon}
                   alt="githubIcon"
-                  className="w-full h-full"
+                  className="w-full h-full cursor-pointer"
                 />
               </a>
             </span>
