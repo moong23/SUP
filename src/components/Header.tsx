@@ -1,38 +1,54 @@
 import githubIcon from "../assets/Icons/githubIcon.png";
 import { useState, useRef, useEffect } from "react";
+import SupLogo from "../assets/Icons/suplogo";
 
 const Header = () => {
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isHover, setIsHover] = useState<boolean>(false);
+  const [hoverColorChange, setHoverColorChange] = useState<boolean>(false);
+  const mouseEnterTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const mouseLeaveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = (e: React.MouseEvent<HTMLHeadingElement>) => {
-    setIsHover(true);
+  const handleMouseEnter = (e: React.MouseEvent<HTMLOrSVGElement>) => {
+    setHoverColorChange(true);
+    mouseEnterTimeoutRef.current = setTimeout(() => {
+      setIsHover(true);
+    }, 2000);
   };
 
-  const handleMouseLeave = (e: React.MouseEvent<HTMLHeadingElement>) => {
-    timeoutRef.current = setTimeout(() => {
+  const handleMouseLeave = (e: React.MouseEvent<HTMLSpanElement>) => {
+    setHoverColorChange(false);
+    mouseLeaveTimeoutRef.current = setTimeout(() => {
       setIsHover(false);
     }, 5000);
   };
 
   useEffect(() => {
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+      if (mouseEnterTimeoutRef.current) {
+        clearTimeout(mouseEnterTimeoutRef.current);
+      }
+      if (mouseLeaveTimeoutRef.current) {
+        clearTimeout(mouseLeaveTimeoutRef.current);
       }
     };
   }, []);
 
-  const [isHover, setIsHover] = useState<boolean>(false);
   return (
     <span className="flex flex-row justify-between w-full">
       <span className="flex flex-row w-full gap-8">
         {!isHover ? (
-          <h1
+          // <h1
+          //   onMouseEnter={handleMouseEnter}
+          //   className="w-[235px] text-[120px] font-bold cursor-pointer"
+          // >
+          //   SUP
+          // </h1>
+          <SupLogo
+            width={235}
             onMouseEnter={handleMouseEnter}
-            className="w-[235px] text-[120px] font-bold cursor-pointer"
-          >
-            SUP
-          </h1>
+            hovered={hoverColorChange}
+            className="shrink-0"
+          />
         ) : (
           <span
             onMouseLeave={handleMouseLeave}

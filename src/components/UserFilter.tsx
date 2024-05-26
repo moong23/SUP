@@ -7,7 +7,7 @@ const UserFilter = () => {
   const { userList, setUserList } = useUserList();
 
   const [localList, setLocalList] = useState<string[]>(
-    JSON.parse(localStorage.getItem("userList") || "null") || ["moonki0623"]
+    JSON.parse(localStorage.getItem("userList") ?? "null") ?? []
   );
 
   const handleUserClick = (user: string) => {
@@ -45,7 +45,7 @@ const UserFilter = () => {
     }
   };
 
-  const handleBlur = (e: any) => {
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
     // will handle api fetching event in here.
     if (0 < value.length && value.length < 3) {
@@ -72,7 +72,7 @@ const UserFilter = () => {
 
   return (
     <div className="flex flex-col gap-4 mt-4 pb-12 mb-4 border-b border-b-[#cfcfcf]">
-      <span className="flex flex-row w-full gap-4">
+      <span className="flex flex-row w-full gap-4 overflow-scroll">
         {localList.map((user: string) => {
           return (
             <UserCard
@@ -86,6 +86,7 @@ const UserFilter = () => {
           type="text"
           className="focus:outline-none text-[18px] text-[#a438f7a9]"
           onKeyDown={handleKeyDown}
+          tabIndex={1}
           placeholder="BOJ 아이디를 입력하세요"
           onBlur={handleBlur}
         />

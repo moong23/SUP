@@ -15,11 +15,11 @@ module.exports = {
       },
       width: {
         mainPage: "1280px",
-        card: "371px",
+        card: "333px",
         userCard: "140px",
       },
       height: {
-        card: "113px",
+        card: "101px",
         userCard: "40px",
       },
     },

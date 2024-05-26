@@ -66,6 +66,7 @@ const ProblemFilter = () => {
             value={level}
             setValue={setLevel}
             type="level"
+            tabIndex={2}
             onClick={() =>
               setPanel({
                 algorithm: false,
@@ -90,6 +91,7 @@ const ProblemFilter = () => {
             value={algorithm}
             type="algorithm"
             setValue={setAlgorithm}
+            tabIndex={3}
             onClick={() =>
               setPanel({
                 level: false,
@@ -99,7 +101,7 @@ const ProblemFilter = () => {
             }
           >
             <div className="absolute flex flex-col top-9 w-[240px] h-[400px] bg-white shadow-xl border border-slate-200 rounded-lg px-2 py-4 text-black">
-              <div className="w-full h-[fit-content] min-h-[40px] rounded-md bg-[#F7F7F5] shrink-0 flex flex-row flex-wrap gap-x-2 gap-y-2 py-2 px-2">
+              <div className="w-full max-h-[160px] h-fit min-h-[40px] rounded-md bg-[#F7F7F5] shrink-0 flex flex-row flex-wrap gap-x-2 gap-y-2 py-2 px-2 mb-3 overflow-y-scroll">
                 {algorithm.map((algo, idx) => {
                   return (
                     <TagBox
@@ -123,7 +125,7 @@ const ProblemFilter = () => {
                     <label
                       htmlFor={tag.kr}
                       key={idx}
-                      className="flex items-center"
+                      className="flex items-center cursor-pointer w-fit"
                     >
                       <input
                         type="checkbox"
@@ -149,6 +151,7 @@ const ProblemFilter = () => {
             value={problemCnt}
             type="problemCnt"
             setValue={setProblemCnt}
+            tabIndex={4}
             onClick={() =>
               setPanel({
                 level: false,
@@ -172,6 +175,7 @@ const ProblemFilter = () => {
         <button
           className="w-full h-full bg-blue-400 rounded-md cursor-pointer"
           onClick={handleApplyBtnClick}
+          tabIndex={5}
         >
           적용하기
         </button>

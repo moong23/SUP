@@ -8,8 +8,9 @@ interface FilterButtonProps {
   children: React.ReactNode;
   value: string[] | number[] | number;
   type?: "level" | "algorithm" | "problemCnt";
-  setValue: (value: any) => void;
+  setValue?: (value: any) => void;
   onClick: () => void;
+  tabIndex?: number;
 }
 
 const FilterButton = ({
@@ -18,8 +19,8 @@ const FilterButton = ({
   children,
   value,
   type,
-  setValue,
   onClick,
+  tabIndex,
 }: FilterButtonProps) => {
   const contentRef = useRef<HTMLSpanElement>(null);
 
@@ -57,6 +58,7 @@ const FilterButton = ({
     <span
       onClick={handleContentClick}
       ref={contentRef}
+      tabIndex={tabIndex || -1}
       className={`${
         isOpen
           ? "max-w-[240px] bg-red text-[#2582E1] border border-[#B2D1F4]"
@@ -72,8 +74,22 @@ const FilterButton = ({
         {text}
         {type === "level" && typeof value === "object" && (
           <>
+            <img
+              className="mx-1"
+              src={require(`../assets/Icons/problemLevel/${value[0]}.svg`)}
+              alt="problemLevel"
+              width={16}
+            />
+            ~
+            <img
+              className="mx-1"
+              src={require(`../assets/Icons/problemLevel/${value[1]}.svg`)}
+              alt="problemLevel"
+              width={16}
+            />
+            {/*           
             : {getCategory(value[0] as number)} ~{" "}
-            {getCategory(value[1] as number)}
+            {getCategory(value[1] as number)} */}
           </>
         )}
         {type === "algorithm" &&

@@ -24,7 +24,7 @@ const TagBox = ({
       onClick={onClick}
       className={`${
         currentTag === tagId ? "order-first" : ""
-      } h-6 items-center justify-center w-[fit-content] flex px-3 py-1 rounded-sm shrink-0`}
+      } h-6 items-center justify-center w-[fit-content] flex px-3 py-1 rounded-sm shrink-0 cursor-pointer`}
     >
       {tagName}
       {children}

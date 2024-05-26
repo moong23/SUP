@@ -9,6 +9,7 @@ import ProblemCard from "./ProblemCard";
 const ProblemList = () => {
   const { userList } = useUserList();
   const { levelFilter, algorithmFilter, problemFilter } = useFilterList();
+  const [problemList, setProblemList] = useState<CategorizedProblem[]>();
 
   const [noResult, setNoResult] = useState<boolean>(false);
   const { data, isLoading, error } = useQuery({
@@ -26,8 +27,6 @@ const ProblemList = () => {
     refetchOnWindowFocus: false,
     refetchOnMount: false,
   });
-
-  const [problemList, setProblemList] = useState<CategorizedProblem[]>();
 
   useEffect(() => {
     if (isLoading) return;
@@ -51,7 +50,8 @@ const ProblemList = () => {
       };
     }
 
-    const processedData = preprocessProblemList(filteredData);
+    const processedData = preprocessProblemList(filteredData, algorithmFilter);
+    console.log("processedData", processedData);
     setProblemList(processedData);
   }, [isLoading, data, error, problemFilter]);
 
@@ -60,13 +60,13 @@ const ProblemList = () => {
   }, [problemList]);
 
   return !noResult && problemList ? (
-    <div className="flex h-[580px] flex-row w-full gap-4 overflow-y-hidden shrink-0 overflow-w-scroll mb-12">
+    <div className="flex h-[600px] flex-row w-full gap-4 overflow-y-hidden shrink-0 overflow-w-scroll mb-12">
       {problemList?.map((problemByTag: CategorizedProblem) => {
         const tagBgColor = problemByTag.bgColor;
         return (
           <div
             key={problemByTag.bojTagId}
-            className="flex flex-col w-full overflow-w-scroll"
+            className="flex flex-col overflow-w-scroll"
           >
             <span
               className="h-6 items-center justify-center w-[fit-content] flex px-3 py-1 mb-4 rounded-sm shrink-0 font-[500]"

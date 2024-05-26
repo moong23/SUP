@@ -6,7 +6,7 @@ interface ZUserList {
 }
 
 export const useUserList = create<ZUserList>((set) => ({
-  userList: ["moonki0623"],
+  userList: JSON.parse(localStorage.getItem("userList") ?? "null") || [],
   setUserList: (userList: string[]) => set({ userList }),
 }));
 

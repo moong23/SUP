@@ -13,7 +13,7 @@ const ProblemCard = ({
     <a
       href={`https://www.acmicpc.net/problem/${probData.problemId}`}
       target="_blank"
-      className="px-4 py-5 bg-white border border-[#bababa] rounded-lg cursor-pointer w-card h-card shadow-sm hover:shadow-lg transition duration-300 ease-in-out"
+      className="px-4 py-3 shrink-0 bg-white border border-[#bababa] rounded-lg cursor-pointer w-card h-card shadow-sm hover:shadow-lg transition duration-300 ease-in-out"
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center">
@@ -24,11 +24,12 @@ const ProblemCard = ({
             className="w-6 h-6"
           />
 
-          <div className="ml-2 text-lg">
+          <div className="w-full ml-2 overflow-hidden text-lg whitespace-nowrap text-ellipsis">
             {probData.problemId}. {probData.titleKo}
           </div>
         </div>
       </div>
+
       <div className="flex w-full gap-2 mt-4 overflow-x-hidden">
         {probData.tags.map((tag, idx) => (
           <TagBox
