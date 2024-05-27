@@ -23,10 +23,10 @@ export const getProblemList = async ({ queryKey }: IQueryKey) => {
   const userQuery = queryStringByUserList(userList);
   const levelQuery = queryStringByProblemLevel(problemLevel);
   const tagQuery = queryStringByProblemTags(problemTags as string[]);
-  console.log(userList);
-  console.log(
-    `https://solved.ac/api/v3/search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
-  );
+  // console.log(userList);
+  // console.log(
+  //   `https://solved.ac/api/v3/search/problem?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`
+  // );
   const response = await axios
     .get(`${URL}?query=${userQuery}${levelQuery}${tagQuery}&page=1&sort=random`)
     .then((res) => {

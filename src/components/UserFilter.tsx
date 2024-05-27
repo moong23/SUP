@@ -24,7 +24,7 @@ const UserFilter = () => {
   }, []);
 
   useEffect(() => {
-    console.log(userList);
+    // console.log(userList);
     localStorage.setItem("userList", JSON.stringify(localList));
   }, [userList]);
 
@@ -38,7 +38,7 @@ const UserFilter = () => {
         return;
       }
       if (value) {
-        console.log("adding new user");
+        // console.log("adding new user");
         addNewUser(value);
         e.currentTarget.value = "";
       }

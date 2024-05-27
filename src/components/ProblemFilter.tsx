@@ -41,13 +41,13 @@ const ProblemFilter = () => {
     newValue: number | number[]
   ) => {
     if (typeof newValue !== "number") return;
-    console.log(newValue);
+    // console.log(newValue);
     setProblemCnt(newValue);
   };
 
   // apply button
   const handleApplyBtnClick = () => {
-    console.log(level, algorithm, problemCnt);
+    // console.log(level, algorithm, problemCnt);
     setLevelFilter(level);
     setAlgorithmFilter(algorithm);
     setProblemFilter(problemCnt);

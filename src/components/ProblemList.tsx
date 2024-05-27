@@ -51,13 +51,13 @@ const ProblemList = () => {
     }
 
     const processedData = preprocessProblemList(filteredData, algorithmFilter);
-    console.log("processedData", processedData);
+    // console.log("processedData", processedData);
     setProblemList(processedData);
   }, [isLoading, data, error, problemFilter]);
 
-  useEffect(() => {
-    console.log(problemList);
-  }, [problemList]);
+  // useEffect(() => {
+  //   console.log(problemList);
+  // }, [problemList]);
 
   return !noResult && problemList ? (
     <div className="flex h-[600px] flex-row w-full gap-4 overflow-y-hidden shrink-0 overflow-w-scroll mb-12">
