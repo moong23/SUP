@@ -4,19 +4,14 @@ import SupLogo from "../assets/Icons/suplogo";
 
 const Header = () => {
   const [isHover, setIsHover] = useState<boolean>(false);
-  const [hoverColorChange, setHoverColorChange] = useState<boolean>(false);
   const mouseEnterTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const mouseLeaveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLOrSVGElement>) => {
-    setHoverColorChange(true);
-    mouseEnterTimeoutRef.current = setTimeout(() => {
-      setIsHover(true);
-    }, 2000);
+    setIsHover(true);
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLSpanElement>) => {
-    setHoverColorChange(false);
     mouseLeaveTimeoutRef.current = setTimeout(() => {
       setIsHover(false);
     }, 5000);
@@ -46,13 +41,12 @@ const Header = () => {
           <SupLogo
             width={235}
             onMouseEnter={handleMouseEnter}
-            hovered={hoverColorChange}
             className="shrink-0"
           />
         ) : (
           <span
             onMouseLeave={handleMouseLeave}
-            className="w-[235px] h-[180px] justify-evenly flex flex-col gap-2 px-4 shrink-0"
+            className="w-[235px] h-[235px] justify-evenly flex flex-col gap-2 px-4 shrink-0"
           >
             <span className="text-[32px] w-full items-center justify-between flex flex-row text-xl">
               Contact
